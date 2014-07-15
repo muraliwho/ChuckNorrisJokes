@@ -6,8 +6,11 @@ import java.util.List;
  * Created by emonk on 3/18/14.
  */
 public class Joke {
+    public static final int RANDOM_ID = 0;
+
     Integer id;
-    String jokeText;
+    String text;
+    List<String> categories;
 
     public Integer getId() {
         return id;
@@ -17,13 +20,17 @@ public class Joke {
         this.id = id;
     }
 
-    public String getJokeText() {
-        return jokeText;
+    public String getText() {
+        return text;
     }
 
-    public void setJokeText(String jokeText) {
-        this.jokeText = jokeText;
+    public void setText(String text) {
+        this.text = text;
     }
+
+    public List<String> getCategories() { return categories; }
+
+    public void setCategories(List<String> categories) {this.categories = categories;}
 
     @Override
     public boolean equals(Object o) {
